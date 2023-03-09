@@ -100,7 +100,6 @@ for i in range(jumlah_bom):
                     lokasi_bom.append(x)
                     run = False
 lokasi_bom.sort()
-print(lokasi_bom)
 
 # ------------pembuatan objek kotak----------------
 kotak_kotak = []
