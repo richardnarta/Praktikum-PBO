@@ -29,18 +29,18 @@ class AkunBank:
         print()
         
         if(opsi == "1"):
-            AkunBank.lihat_saldo(self, list_pelanggan)
+            self.lihat_saldo(list_pelanggan)
         elif(opsi == "2"):
-            AkunBank.tarik_tunai(self, list_pelanggan)
+            self.tarik_tunai(list_pelanggan)
         elif(opsi == "3"):
-            AkunBank.transfer(self, list_pelanggan)
+            self.transfer(list_pelanggan)
         elif(opsi == "4"):
             exit()
     
     def lihat_saldo(self, list_pelanggan):
         
         print(f"{self.nama} memiliki saldo {self.__saldo:,}\n")
-        AkunBank.lihat_menu(self, list_pelanggan)
+        self.lihat_menu(list_pelanggan)
     
     def tarik_tunai(self, list_pelanggan):
         
@@ -52,7 +52,7 @@ class AkunBank:
             self.__saldo -= tarik_tunai
             print("Saldo berhasil ditarik!\n")
             
-        AkunBank.lihat_menu(self, list_pelanggan)
+        self.lihat_menu(list_pelanggan)
     
     def transfer(self,list_pelanggan):
     
@@ -71,7 +71,7 @@ class AkunBank:
             elif(self.__saldo < transfer):
                 print("Saldo tidak mencukupi! Kembali ke menu utama ...\n")
                 
-        AkunBank.lihat_menu(self, list_pelanggan)
+        self.lihat_menu(list_pelanggan)
         
     
 Akun1 = AkunBank(1234, "Richard", 5_000_000_000)
