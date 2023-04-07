@@ -44,11 +44,11 @@ class AkunGold(AkunBank):
             
     def suku_bunga(self):
         if(self.umur >=3 and self.saldo >= 1_000_000_000):
-            return 1
+            return 0.01
         elif(self.umur < 3 and self.saldo >= 1_000_000_000):
-            return 2
+            return 0.02
         elif(self.saldo < 1_000_000_000):
-            return 3
+            return 0.03
 
 class AkunSilver(AkunBank):
     def transfer_saldo(self, transfer):
@@ -61,8 +61,8 @@ class AkunSilver(AkunBank):
             
     def suku_bunga(self):
         if(self.umur >=3 and self.saldo >= 10_000_000):
-            return 1
+            return 0.01
         elif(self.umur < 3 and self.saldo >= 10_000_000):
-            return 2
+            return 0.02
         elif(self.saldo < 10_000_000):
-            return 3
+            return 0.03
